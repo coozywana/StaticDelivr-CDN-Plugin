@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://cdn.staticdelivr.com/npm/\\1@\\2/\\3"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://cdn\\.jsdelivr\\.net/npm/([^@]+)@((?:\\d+\\.){2}\\d+)/(.*)$",
+      "resourceTypes": ["script", "stylesheet"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://cdn.staticdelivr.com/npm/@fortawesome/fontawesome-free@\\1/css/all.min.css"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://cdnjs\\.cloudflare\\.com/ajax/libs/font-awesome/(\\d+\\.\\d+\\.\\d+)/css/all\\.min\\.css$",
+      "resourceTypes": ["stylesheet"]
+    }
+  },
+
+  {
+    "id": 3,
+    "priority": 3,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://cdn.staticdelivr.com/npm/jquery@\\1/dist/jquery.min.js"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://code\\.jquery\\.com/jquery-(\\d+\\.\\d+\\.\\d+)\\.min\\.js$",
+      "resourceTypes": ["script"]
+    }
+  }
+
+  
+]

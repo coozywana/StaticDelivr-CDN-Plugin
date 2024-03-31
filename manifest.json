@@ -1,0 +1,26 @@
+{
+   "author": {
+      "name": "Coozywana"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "declarative_net_request": {
+      "rule_resources": [{
+         "enabled": true,
+         "id": "myrules",
+         "path": "rules.json"
+      }]
+   },
+   "description": "StaticDelivr CDN Plugin is designed to optimize web performance by seamlessly redirecting requests to popular content delivery networks (CDNs) to StaticDelivr, ensuring faster and more reliable content delivery.",
+   "host_permissions": [ "*://*/*" ],
+   "icons": {
+      "128": "images/icon-128.png"
+   },
+   "manifest_version": 3,
+   "name": "StaticDelivr CDN Plugin",
+   "offline_enabled": true,
+   "permissions": [ "declarativeNetRequest" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.0.0"
+}
